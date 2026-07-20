@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Egresados - Sistema de Gestión</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Sistema de Gestión de Egresados</h1>
+        <p class="subtitulo">Universidad CENFOTEC</p>
+        <nav aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="egresados.html">Registrarse</a>
+            <a href="login.html">Inicio de sesión</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="carreras.html">Carreras</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contenedor-formulario">
+            <h2>Registrar Egresado</h2>
+            
+            <form id="formEgresados" novalidate>
+                
+                <div class="grupo-formulario">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Andrés Gamboa">
+                    <span class="error-mensaje" id="errorNombre"></span>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="cedula">Cédula Física:</label>
+                    <input type="text" id="cedula" name="cedula" placeholder="Formato: X-XXXX-XXXX">
+                    <span class="error-mensaje" id="errorCedula"></span>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="telefono">Teléfono Celular:</label>
+                    <input type="text" id="telefono" name="telefono" placeholder="Ej: 88882222">
+                    <span class="error-mensaje" id="errorTelefono"></span>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="correoEgresado">Correo Electrónico:</label>
+                    <input type="email" id="correoEgresado" name="correoEgresado" placeholder="ejemplo@ucenfotec.ac.cr">
+                    <span class="error-mensaje" id="errorCorreoEgresado"></span>
+                </div>
+
+                <!-- ¡NUEVO CAMPO! Casilla de Contraseña -->
+                <div class="grupo-formulario">
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena" placeholder="Cree su contraseña de acceso">
+                    <span class="error-mensaje" id="errorContrasena"></span>
+                </div>
+
+                <button type="submit">Guardar en Sistema</button>
+                
+            </form>
+        </section>
+
+        <section class="contenedor-tabla" style="margin-top: 2rem;">
+            <h2>Egresados Registrados en el Sistema</h2>
+            <div style="overflow-x: auto;">
+                <table id="tablaEgresados" class="tabla-datos">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Cédula</th>
+                            <th>Teléfono</th>
+                            <th>Correo</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTablaEgresados">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+
+
+<script src="js/egresados.js"></script> 
+    </main>
+
+    <footer>
+        <p>© 2026 Universidad CENFOTEC</p>
+    </footer>
+
+    <script src="js/egresados.js"></script>
+</body>
+
+</html>
